@@ -10,6 +10,10 @@ import {
   IconLock,
 } from '@tabler/icons-react';
 
+type Props = {
+  opened: boolean;
+};
+
 const navItems = [
   { label: 'Dashboard', icon: IconGauge, link: '/' },
   {
@@ -45,9 +49,9 @@ const navItems = [
   },
 ];
 
-export default function Navbar() {
+export default function Navbar({ opened }: Props) {
   return (
-    <MantineNavbar width={{ base: 260 }} p='xs'>
+    <MantineNavbar width={{ base: 260 }} p='xs' hiddenBreakpoint='sm' hidden={!opened}>
       <MantineNavbar.Section grow component={ScrollArea} mx='-xs' px='xs'>
         {navItems.map(navItem =>
           navItem.link ? (
