@@ -14,6 +14,7 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { DatePickerInput } from '@mantine/dates';
+import dayjs from 'dayjs';
 
 export default function Forms() {
   const form = useForm({
@@ -27,6 +28,8 @@ export default function Forms() {
       termsOfService: false,
       date: '',
       dates: [''],
+      past: '',
+      future: '',
     },
     validate: {
       email: value => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
@@ -35,7 +38,7 @@ export default function Forms() {
   });
 
   return (
-    <Card shadow='sm' padding='md' radius='md' withBorder>
+    <Card shadow='sm' padding='md' radius='md' withBorder sx={{ overflow: 'visible' }}>
       <Title order={2} mb='md'>
         Forms Example
       </Title>
@@ -99,6 +102,19 @@ export default function Forms() {
           </Radio.Group>
           <DatePickerInput label='Pick date' placeholder='Pick date' {...form.getInputProps('date')} />
           <DatePickerInput type='range' label='Pick dates' placeholder='Pick dates' {...form.getInputProps('dates')} />
+          <DatePickerInput type='range' label='Pick dates' placeholder='Pick dates' {...form.getInputProps('dates')} />
+          <DatePickerInput
+            label='Pick dates past'
+            placeholder='Pick dates past'
+            {...form.getInputProps('past')}
+            maxDate={dayjs().toDate()}
+          />
+          <DatePickerInput
+            label='Pick dates future'
+            placeholder='Pick dates future'
+            {...form.getInputProps('future')}
+            minDate={dayjs().toDate()}
+          />
         </SimpleGrid>
 
         <Checkbox
