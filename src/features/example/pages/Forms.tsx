@@ -13,6 +13,7 @@ import {
   Radio,
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { DatePickerInput } from '@mantine/dates';
 
 export default function Forms() {
   const form = useForm({
@@ -24,6 +25,8 @@ export default function Forms() {
       age: '',
       radio: '',
       termsOfService: false,
+      date: '',
+      dates: [''],
     },
     validate: {
       email: value => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
@@ -94,6 +97,8 @@ export default function Forms() {
               <Radio value='vue' label='Vue' />
             </Group>
           </Radio.Group>
+          <DatePickerInput label='Pick date' placeholder='Pick date' {...form.getInputProps('date')} />
+          <DatePickerInput type='range' label='Pick dates' placeholder='Pick dates' {...form.getInputProps('dates')} />
         </SimpleGrid>
 
         <Checkbox
