@@ -10,6 +10,7 @@ export default function Layout() {
   return (
     <AppShell
       padding='md'
+      navbarOffsetBreakpoint='sm'
       navbar={<Navbar opened={opened} />}
       header={<Header opened={opened} setOpened={setOpened} />}
       styles={theme => ({
