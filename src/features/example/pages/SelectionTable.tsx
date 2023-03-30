@@ -21,11 +21,11 @@ export default function SelectionTable() {
         header: 'title',
       },
       {
-        header: 'Status',
-        accessorKey: 'userId',
-        Cell: ({ cell }) => (
+        header: 'Id Pill',
+        accessorKey: 'id',
+        Cell: ({ renderedCellValue }) => (
           <Badge color='red' variant='filled'>
-            {cell.getValue<string>()}
+            {renderedCellValue}
           </Badge>
         ),
       },

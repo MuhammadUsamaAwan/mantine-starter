@@ -108,7 +108,6 @@ export default function Forms() {
           </Radio.Group>
           <DatePickerInput label='Pick date' placeholder='Pick date' {...form.getInputProps('date')} />
           <DatePickerInput type='range' label='Pick dates' placeholder='Pick dates' {...form.getInputProps('dates')} />
-          <DatePickerInput type='range' label='Pick dates' placeholder='Pick dates' {...form.getInputProps('dates')} />
           <DatePickerInput
             label='Pick dates past'
             placeholder='Pick dates past'

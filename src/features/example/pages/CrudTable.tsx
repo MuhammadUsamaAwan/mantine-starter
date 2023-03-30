@@ -35,7 +35,7 @@ export default function CrudTable() {
       data={data || []}
       state={{ isLoading, showProgressBars: isFetching }}
       enableFullScreenToggle={false}
-      renderRowActions={({ row, table }) => (
+      renderRowActions={({ row }) => (
         <Box sx={{ display: 'flex', gap: '16px' }}>
           <Tooltip withArrow position='left' label='Edit'>
             <ActionIcon onClick={() => console.log('Edit', row)}>
