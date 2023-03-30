@@ -54,6 +54,7 @@ const navItems = [
     links: [
       { label: 'Forms', link: '/forms' },
       { label: 'Modals', link: '/modals' },
+      { label: 'Notifications', link: '/notifications' },
     ],
   },
 ];
