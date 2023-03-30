@@ -63,7 +63,9 @@ const navItems = [
     icon: IconTable,
     links: [
       { label: 'Simple Table', link: '/table-simple' },
-      { label: 'Modals', link: '/modals' },
+      { label: 'Crud Table', link: '/table-crud' },
+      { label: 'Selection Table', link: '/table-selection' },
+      { label: 'Expand Table', link: '/table-expand' },
     ],
   },
 ];

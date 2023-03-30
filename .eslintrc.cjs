@@ -23,5 +23,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'import/prefer-default-export': 0,
     'react/jsx-props-no-spreading': 0,
+    'react/no-unstable-nested-components': 0,
+    'react/prop-types': 0,
   },
 };
