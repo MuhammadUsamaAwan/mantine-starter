@@ -8,6 +8,7 @@ import Layout from './layouts/Layout';
 import Forms from './features/example/pages/Forms';
 import Modals from './features/example/pages/Modals';
 import NotificationsExample from './features/example/pages/Notifications';
+import SimpleTable from './features/example/pages/SimpleTable';
 
 export default function App() {
   const theme = useTheme();
@@ -23,6 +24,7 @@ export default function App() {
               <Route path='forms' element={<Forms />} />
               <Route path='modals' element={<Modals />} />
               <Route path='notifications' element={<NotificationsExample />} />
+              <Route path='table-simple' element={<SimpleTable />} />
             </Route>
           </Routes>
         </ModalsProvider>

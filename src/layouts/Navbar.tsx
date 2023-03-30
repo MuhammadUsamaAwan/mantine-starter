@@ -9,6 +9,7 @@ import {
   IconAdjustments,
   IconLock,
   IconBulb,
+  IconTable,
 } from '@tabler/icons-react';
 
 type Props = {
@@ -55,6 +56,14 @@ const navItems = [
       { label: 'Forms', link: '/forms' },
       { label: 'Modals', link: '/modals' },
       { label: 'Notifications', link: '/notifications' },
+    ],
+  },
+  {
+    label: 'Examples Table',
+    icon: IconTable,
+    links: [
+      { label: 'Simple Table', link: '/table-simple' },
+      { label: 'Modals', link: '/modals' },
     ],
   },
 ];

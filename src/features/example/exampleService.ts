@@ -6,7 +6,6 @@ const exampleApi = api.injectEndpoints({
       query: () => 'https://jsonplaceholder.typicode.com/posts',
     }),
   }),
-  overrideExisting: false,
 });
 
 export const { useGetPostsQuery } = exampleApi;
