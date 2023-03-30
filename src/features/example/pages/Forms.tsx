@@ -15,6 +15,7 @@ import {
 import { useForm } from '@mantine/form';
 import { DatePickerInput } from '@mantine/dates';
 import dayjs from 'dayjs';
+import convertToBase64 from '../../../helpers/convertToBase64';
 
 export default function Forms() {
   const form = useForm({
@@ -22,7 +23,7 @@ export default function Forms() {
       email: '',
       framework: '',
       frameworks: '',
-      file: '',
+      file: null,
       age: '',
       radio: '',
       termsOfService: false,
@@ -43,7 +44,12 @@ export default function Forms() {
         Forms Example
       </Title>
 
-      <form onSubmit={form.onSubmit(values => console.log(values))}>
+      <form
+        onSubmit={form.onSubmit(async values => {
+          const base64 = await convertToBase64(values.file as unknown as File);
+          console.log({ ...values, ...base64 });
+        })}
+      >
         <SimpleGrid
           cols={4}
           breakpoints={[
