@@ -8,6 +8,7 @@ import {
   IconFileAnalytics,
   IconAdjustments,
   IconLock,
+  IconBulb,
 } from '@tabler/icons-react';
 
 type Props = {
@@ -45,6 +46,14 @@ const navItems = [
       { label: 'Enable 2FA', link: '/' },
       { label: 'Change password', link: '/' },
       { label: 'Recovery codes', link: '/' },
+    ],
+  },
+  {
+    label: 'Examples',
+    icon: IconBulb,
+    links: [
+      { label: 'Forms', link: '/forms' },
+      { label: 'Modals', link: '/modals' },
     ],
   },
 ];

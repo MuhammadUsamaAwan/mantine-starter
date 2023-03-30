@@ -26,10 +26,10 @@ export default function Forms() {
       age: '',
       radio: '',
       termsOfService: false,
-      date: '',
-      dates: [''],
-      past: '',
-      future: '',
+      date: null,
+      dates: [null],
+      past: null,
+      future: null,
     },
     validate: {
       email: value => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
@@ -38,7 +38,7 @@ export default function Forms() {
   });
 
   return (
-    <Card shadow='sm' padding='md' radius='md' withBorder sx={{ overflow: 'visible' }}>
+    <Card shadow='sm' padding='md' radius='md' withBorder>
       <Title order={2} mb='md'>
         Forms Example
       </Title>
